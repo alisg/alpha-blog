@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
     def show
-        @articles = Article.find(params[:id])
+        @article_show = Article.find(params[:id])
     end
     
     def index
