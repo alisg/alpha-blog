@@ -1,0 +1,20 @@
+<% if @article_edit.errors.any? %>
+    <h2> The following errors prevented the article from being saved</h2>
+    <% @article_edit.errors.full_messages.each do |msg| %>
+        <%= msg %><br>
+    <% end %>
+<% end %>
+<h1> Update article </h1>
+<%= form_with(model: @article_edit, local: true) do |form| %>
+    <p>
+        <%= form.label :title %><br>
+        <%= form.text_field :title %><br>
+    </p>
+    <p>
+        <%= form.label :description %><br>
+        <%= form.text_area :description %><br>
+    </p>
+    <p>
+        <%= form.submit %>
+    </p>
+<% end %>
