@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
+    before_action :set_article, only: [:show, :edit, :update, :destroy]
+    
     def show
-        @article_show = Article.find(params[:id])
     end
     
     def index
@@ -12,11 +13,10 @@ class ArticlesController < ApplicationController
     end
     
     def edit
-        @article_edit = Article.find(params[:id])
     end
     
     def create
-        @article = Article.new(params.require(:article).permit(:title,:description))
+        @article = Article.new(set_params)
         if @article.save
             flash[:notice] = 'The Article is successfully created' #throwing an alert and you can use tthis from html.erb files 
             redirect_to @article
@@ -26,19 +26,27 @@ class ArticlesController < ApplicationController
     end
     
     def update
-        @article_update = Article.find(params[:id])
-        if @article_update.update(params.require(:article).permit(:title, :description))
+        if @article.update(set_params)
             flash[:notice] = "The Article is successfully updated"
-            redirect_to @article_update
+            redirect_to @article
         else
             render 'edit'
         end
     end
     
     def destroy
-        @article_dlt = Article.find(params[:id])
-        @article_dlt.delete
+        @article.delete
         redirect_to articles_path
+    end
+    
+    private
+    
+    def set_article
+        @article = Article.find(params[:id])
+    end
+    
+    def set_params
+        params.require(:article).permit(:title, :description)
     end
 
 end
