@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-xl bg-transparent" >
+    <%# <a class="navbar-brand" href="#" id="logo">Alpha Blog</a> %>
+    <%= link_to "ALPHA BLOG", root_path, class: 'navbar-brand', id: 'logo' %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+        <ul class="nav justify-content-end" >
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Articles
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdow">
+                    <%= link_to "Create New Article", new_article_path, class: "dropdown-item"%>
+                    <%= link_to "Articles list", articles_path, class: "dropdown-item"%>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Sign In</a>
+            </li>
+        </ul>
+    </div>
+
+    <form class="form-inline my-2 my-sm-0">
+        <input class="form-control mr-sm-2" type="search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: white; border-color: beige;" >Search</button>
+    </form>
+</nav>
