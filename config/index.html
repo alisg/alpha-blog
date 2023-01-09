@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <img src="/Users/alisa.grigoryan/Desktop/picc.png" class="img-fluid" class="fixed-top" alt="Responsive image">
+    <nav class="navbar navbar-expand-xl bg-transparent fixed-top" >
+        <a class="navbar-brand" href="#" style="color: white;">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+            <ul class="nav justify-content-end" >
+                <li class="nav-item">
+                  <a class="nav-link active" href="#" style="color: white;">Articles</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#" style="color: white;">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#" style="color: white;">Sign In</a>
+                </li>
+            </ul>
+        </div>
+
+        <form class="form-inline my-2 my-sm-0">
+            <input class="form-control mr-sm-2" type="search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: white; border-color: beige;" >Search</button>
+        </form>
+        
+    </nav>
+
+    <div class="jumbotron bg-light">
+        <div class="container text-center">
+            <h1 class="display-4">Alpha, Blog!</h1>
+            <p class="lead">HI! If you're looking for an interesting and fun stories, then you got right there</p>
+            <p class="lead">Feel free to sign in and add your own stories</p>
+            <hr><br>
+            <h2 class="display-5">Top Rated Articles </h2>
+            <h2> ⭐️⭐️⭐️ </h2>
+        </div>
+    </div>
+
+    <div id="ratedArticles" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#ratedArticles" data-slide-to="0" class="active"></li>
+          <li data-target="#ratedArticles" data-slide-to="1"></li>
+          <li data-target="#ratedArticles" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/Users/alisa.grigoryan/Desktop/picc.png" class="d-block w-100" alt="RatedArticlesBackground">
+            <div class="carousel-caption">
+              <h5>First Article label</h5>
+              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ... (more)</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/Users/alisa.grigoryan/Desktop/picc.png" class="d-block w-100" alt="RatedArticlesBackground">
+            <div class="carousel-caption">
+              <h5>Second Article label</h5>
+              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ... (more)</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="/Users/alisa.grigoryan/Desktop/picc.png" class="d-block w-100" alt="RatedArticlesBackground">
+            <div class="carousel-caption">
+              <h5>Third Article label</h5>
+              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ... (more)</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#ratedArticles" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#ratedArticles" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
+    
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
