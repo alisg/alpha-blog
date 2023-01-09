@@ -4,7 +4,7 @@
         <div class = "col-8 mt-4">
             <div class="card text-center shadow mb-4 rounded">
                 <div class="card-header font-talic">
-                    by Alice Greg
+                    by <%= @article.user.username if @article.user%>
                 </div>
                 <div class="card-body">
                     <div class="card-text text-start">
