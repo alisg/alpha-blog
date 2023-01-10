@@ -3,6 +3,5 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   resources :articles # only: [:show, :index, :new, :create, :edit, :update, :destroy] all this features are being called already by just adding resources :articles
   get 'signup', to: 'users#new'
-  # post 'users', to: 'users#create'
   resources :users, except: [:new]
 end
