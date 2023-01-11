@@ -12,16 +12,28 @@
                     Articles
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdow">
-                    <%= link_to "Create New Article", new_article_path, class: "dropdown-item"%>
-                    <%= link_to "Articles list", articles_path, class: "dropdown-item"%>
+                    <% if logged_in? %>
+                        <%= link_to "Create New Article", new_article_path, class: "dropdown-item"%>
+                    <% end %>
+                    <%= link_to "View Articles", articles_path, class: "dropdown-item"%>
                 </div>
             </li>
             <li class="nav-item">
                 <%= link_to "Bloggers", users_path, class: "nav-link"%>
             </li>
             <% if logged_in?%>
-                <li class="nav-item">
+                <%# <li class="nav-item">
                     <%= link_to current_user.username, user_path(current_user), class: "nav-link active" %>
+                <%# </li> %>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <%= "(Admin)" if current_user.admin?  %> Profile [<%= current_user.username %>]
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdow">
+                        <%= link_to "View your profile", user_path(current_user), class: "dropdown-item"%>
+                        <%= link_to "Edit your profile", edit_user_path(current_user), class: "dropdown-item"%>
+                        <%= link_to "Delete profile", user_path(current_user), class: "dropdown-item text-danger", method: :delete, data: { confirm: "Are you sure?"}%>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <%= link_to "Log Out", logout_path, class: "nav-link active", method: :delete %>
