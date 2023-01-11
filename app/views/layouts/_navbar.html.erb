@@ -7,6 +7,9 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent" >
         <ul class="nav justify-content-end" >
+            <li class="nav-item">
+                <%= link_to "Bloggers", users_path, class: "nav-link"%>
+            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Articles
@@ -18,13 +21,18 @@
                     <%= link_to "View Articles", articles_path, class: "dropdown-item"%>
                 </div>
             </li>
-            <li class="nav-item">
-                <%= link_to "Bloggers", users_path, class: "nav-link"%>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Categories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdow">
+                    <% if logged_in? && current_user.admin? %>
+                        <%= link_to "Create New Category", new_category_path, class: "dropdown-item"%>
+                    <% end %>
+                    <%= link_to "View Categories", categories_path, class: "dropdown-item"%>
+                </div>
             </li>
             <% if logged_in?%>
-                <%# <li class="nav-item">
-                    <%= link_to current_user.username, user_path(current_user), class: "nav-link active" %>
-                <%# </li> %>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <%= "(Admin)" if current_user.admin?  %> Profile [<%= current_user.username %>]
