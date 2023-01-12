@@ -15,6 +15,14 @@
                         <%= f.text_area :description, rows: 5, class: "form-control shadow rounded",id: "formGroupExampleInput", placeholder: "Description should be 300 chars min"%>
                     </div>
                 </div>
+                <div class="form-group row mt-3">
+                    <%= f.label :category, class: "col-2 col-form-label"%><br>
+                    <div class="col-3 ">
+                        <%= f.collection_select(:category_ids, Category.all, :id, :name, 
+                        { prompt: "Make your selection from the list below(can be empty)" }, 
+                        { multiple: true, size: 3, class: "custom-select shadow bg-light rounded" } ) %>
+                    </div>
+                </div>
                 <div class="form-group mt-3">
                     <%= f.submit class: "btn btn-outline-dark btn-lg shadow rounded"%>
                 </div>
