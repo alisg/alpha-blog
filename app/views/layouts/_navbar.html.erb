@@ -1,6 +1,5 @@
 <nav class="navbar navbar-expand-xl bg-transparent" >
-    <%# <a class="navbar-brand" href="#" id="logo">Alpha Blog</a> %>
-    <%= link_to "ALPHA BLOG", root_path, class: 'navbar-brand', id: 'logo' %>
+    <%= link_to "COOL BLOGGERS", root_path, class: 'navbar-brand', id: 'logo' %>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -56,9 +55,10 @@
             <% end %>
         </ul>
     </div>
-
-    <form class="form-inline my-2 my-sm-0">
-        <input class="form-control mr-sm-2" type="search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="color: white; border-color: beige;" >Search</button>
+    <form class="form-inline my-2 my-lg-0">
+        <div class="input-group">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </div>
     </form>
 </nav>
