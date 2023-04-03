@@ -2,7 +2,7 @@
 This is a Ruby on Rails application for bloggers to register and publish their blogs.
 
 ## Installation
-To install and run this application, you will need to have Ruby version 2.6.6 and Rails version 6.0.6 installed on your system.
+To install and run this application, you will need to have Ruby version `2.6.6` and Rails version `6.0.6` installed on your system.
 
 1. Clone this repository to your local machine:
 
